@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('email')->unique();
             $table->string('no_hp')->unique();
+            $table->enum('role', ['peserta', 'penyelenggara'])->default('peserta');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
